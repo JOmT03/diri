@@ -1,0 +1,235 @@
+/* ===============================
+   WINDOWS 6 / 7 RETRO THEME
+   FULL CSS REWRITE
+================================ */
+
+/* ===== Root Variables ===== */
+:root {
+  --win-blue: #0078d7;
+  --win-light-blue: #e8f4f8;
+  --win-gray: #c0c0c0;
+  --win-dark-gray: #7f7f7f;
+  --win-bg: #f2f2f2;
+  --win-panel: #dadada;
+  --win-text: #000;
+  --radius: 0px;
+  --transition: all 0.2s ease;
+  --inset: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #7f7f7f;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* ===== Body ===== */
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  color: var(--win-text);
+  background: linear-gradient(180deg, #1ba1e2 0%, #0078d7 100%);
+  line-height: 1.6;
+}
+
+/* ===== Header / Navbar ===== */
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(180deg, #f0f0f0, #d4d4d4);
+  border-bottom: 1px solid #a5a5a5;
+  box-shadow: inset 0 1px 0 #fff, 0 1px 3px rgba(0,0,0,.3);
+}
+
+.navbar {
+  padding: 6px 10px;
+}
+
+.navbar-brand {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--win-blue);
+  padding: 4px 10px;
+  background: linear-gradient(180deg, #fff, #e8e8e8);
+  border: 1px solid var(--win-gray);
+  box-shadow: var(--inset);
+}
+
+.navbar-nav .nav-link {
+  font-size: 11px;
+  padding: 4px 8px;
+  margin-left: 6px;
+  color: #000;
+  border: 1px solid transparent;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: linear-gradient(180deg, #e8f4f8, #d4e8f0);
+  border: 1px solid var(--win-blue);
+  box-shadow: var(--inset);
+  color: var(--win-blue);
+}
+
+/* ===== Main Wrapper ===== */
+.main-wrapper {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* ===== Hero / Window Panel ===== */
+.hero {
+  max-width: 1100px;
+  width: 100%;
+  padding: 50px;
+  background: linear-gradient(180deg, var(--win-bg), var(--win-panel));
+  border: 3px solid;
+  border-color: #ffffff var(--win-dark-gray) var(--win-dark-gray) #ffffff;
+  box-shadow:
+    inset 2px 2px 0 #ffffff,
+    inset -2px -2px 0 var(--win-dark-gray),
+    0 8px 18px rgba(0,0,0,.35);
+  position: relative;
+}
+
+/* ===== Fake Title Bar ===== */
+.window-titlebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  padding: 6px 10px;
+  background: linear-gradient(180deg, #eaf3ff, #9bbce8);
+  border-bottom: 2px solid var(--win-dark-gray);
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Window Buttons */
+.window-buttons span {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-left: 4px;
+  background: linear-gradient(180deg, #fff, #dcdcdc);
+  border: 1px solid var(--win-dark-gray);
+  box-shadow: inset 1px 1px 0 #fff;
+}
+
+/* ===== Hero Content Spacing ===== */
+.hero .row {
+  margin-top: 35px;
+}
+
+.hero .col-md-6:first-child {
+  border-right: 2px solid var(--win-gray);
+  padding-right: 35px;
+}
+
+/* ===== Highlight Label ===== */
+.highlight {
+  display: inline-block;
+   color: #ffffff;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 3px 6px;
+  margin-bottom: 18px;
+  /*background: linear-gradient(180deg, #fff, #e8e8e8);*/
+  background: linear-gradient(180deg, #4d94ff 0%, #003f7f 100%);
+  border: 1px solid var(--win-gray);
+  box-shadow: var(--inset);
+}
+
+/* ===== Hero Title ===== */
+.hero-title {
+  font-size: 32px;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  text-shadow: 0 1px 0 rgba(255,255,255,.6);
+}
+
+.hero-title span {
+  display: block;
+  font-size: 26px;
+  color: var(--win-blue);
+}
+
+/* ===== Text ===== */
+.small-text {
+  font-size: 11px;
+  color: black;
+  max-width: 460px;
+  line-height: 1.8;
+}
+
+/* ===== Buttons ===== */
+.buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.btn {
+  font-size: 10px;
+  padding: 6px 18px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  border: 1px solid var(--win-gray);
+  background: linear-gradient(180deg, #fff, #ececec);
+  box-shadow: var(--inset), 0 1px 2px rgba(0,0,0,.2);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-main {
+  color: var(--win-blue);
+  border-color: var(--win-blue);
+  background: linear-gradient(180deg, #e8f4f8, #c3dae8);
+  font-weight: 700;
+}
+
+.btn:hover {
+  background: linear-gradient(180deg, #d4e8f0, #a8c8dc);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: linear-gradient(180deg, #f0f0f0, #d4d4d4);
+  border-top: 1px solid #a5a5a5;
+  text-align: center;
+  padding: 10px;
+  font-size: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px;
+  }
+
+  .hero .col-md-6:first-child {
+    border-right: none;
+    border-bottom: 2px solid var(--win-gray);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+  }
+}

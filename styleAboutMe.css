@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #D5AA65;
+    color: #012C4E;
+}
+
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #C79A55;
+}
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.about img {
+    width: 400px;
+    border-radius: 15px;
+}
+
+.about-text {
+    max-width: 400px;
+    font-size: 16px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    justify-items: center;
+}
+
+
+.section h2 {
+    text-align: center;
+    color: #0B493A;
+    margin-bottom: 10px;
+}
+
+
+.card {
+    width: 260px;
+    padding: 20px;
+    background-color: #EAD292;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.card p {
+    margin: 8px 0;
+}
+
+
+.skill-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 32px;
+    color: #0B493A;
+}
+
+.project-title {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 32px;
+    color: #0B493A;
+}
+
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 700px;
+    margin: 40px auto;
+    justify-items: center;
+}
+
+
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 15px;
+    background-color: #C79A55;
+}
+
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .about img {
+        width: 300px;
+    }
+}
