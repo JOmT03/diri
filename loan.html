@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="En">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loan Form</title>
+    <link rel="stylesheet" href="loan.css">
+</head>
+<body>
+   
+    <form action="#" method="post" autocomplete="on" target="_self">
+        <h1>Loan Form</h1>
+
+        <div class="row">
+            <div>
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Complete name" required>
+            </div>
+            <div>
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="09123456789" pattern="\d{10,11}" maxlength="11">
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div>
+                <label for="dob">Date of birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                </fieldset>
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="21" max="50">
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <fieldset>
+                    <legend>Civil status</legend>
+                    <label><input type="radio" name="status" value="single"> Single</label>
+                    <label><input type="radio" name="status" value="married"> Married</label>
+                    <label><input type="radio" name="status" value="separated"> Separated</label>
+                </fieldset>
+            </div>
+            <div>
+                <label for="idType">ID type</label>
+                <select id="idType" name="idType">
+                    <option value="philsys">Philsys</option>
+                    <option value="sss">SSS</option>
+                    <option value="drivers">Driver's License</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <label for="idFile">Upload ID</label>
+                <input type="file" id="idFile" name="idFile" accept=".png,.jpg,.jpeg,.pdf,.doc,.docx">
+            </div>
+            <div>
+                <label for="collateral">Collateral</label>
+                <select id="collateral" name="collateral" required>
+                    <option value="" disabled selected>Select collateral</option>
+                    <option value="house">House</option>
+                    <option value="vehicle">Vehicle</option>
+                    <option value="spouse">Spouse</option>
+                    <option value="child">Child</option>
+                    <option value="parents">Parents</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <label for="comment">Comment</label>
+        <textarea id="comment" name="comment" rows="3" cols="30"></textarea>
+
+        <div class="form-actions">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+
